@@ -19,6 +19,10 @@ public class BancoController {
         int opcao;
         do {
             opcao = view.mostrarMenuPrincipal();
+            if (opcao < 0 || opcao > 3) {
+                view.mostrarMensagem("Opção inválida! Por favor, escolha novamente.");
+                continue;
+            }
             switch (opcao) {
                 case 1:
                     cadastrarUsuario();
@@ -32,8 +36,6 @@ public class BancoController {
                 case 0:
                     view.mostrarMensagem("Saindo...");
                     break;
-                default:
-                    view.mostrarMensagem("Opção inválida!");
             }
         } while (opcao != 0);
     }
@@ -76,6 +78,10 @@ public class BancoController {
         int opcao;
         do {
             opcao = view.mostrarMenuUsuario();
+            if (opcao < 0 || opcao > 6) {
+                view.mostrarMensagem("Opção inválida! Por favor, escolha novamente.");
+                continue;
+            }
             switch (opcao) {
                 case 1:
                     consultarSaldo();
@@ -98,11 +104,10 @@ public class BancoController {
                 case 0:
                     view.mostrarMensagem("Saindo...");
                     break;
-                default:
-                    view.mostrarMensagem("Opção inválida!");
             }
         } while (opcao != 0);
     }
+
 
     private void consultarSaldo() {
         int numeroConta = view.lerNumeroConta("para consulta de saldo");
