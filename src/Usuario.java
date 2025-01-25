@@ -9,7 +9,6 @@ public class Usuario {
         this.senha = senha;
     }
 
-    // Getters and setters
     public String getNome() { return nome; }
     public String getCpf() { return cpf; }
     public String getSenha() { return senha; }

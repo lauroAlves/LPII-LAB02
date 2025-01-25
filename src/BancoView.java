@@ -83,12 +83,11 @@ public class BancoView {
         return scanner.nextDouble();
     }
 
-    // Novo método para ler a taxa de rendimento ao criar uma conta poupança
     public double lerTaxaRendimento() {
         System.out.print("Digite a taxa de rendimento para a conta poupança: ");
         return scanner.nextDouble();
     }
 
-    // Novo método para gerar o arquivo CSV com as contas
+
 
 }
